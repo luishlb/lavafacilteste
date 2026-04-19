@@ -3,69 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LavaFácil — Atendimento</title>
+  <title>LavaFácil — Lavanderia Self-Service</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="landing.css">
 </head>
 <body>
 
-  <div class="painel">
+  <!-- Barra de navegação -->
+  <nav class="navbar">
+    <span class="nav-logo">👕 LavaFácil</span>
+    <a class="nav-painel" href="painel.html">Área interna →</a>
+  </nav>
 
-    <!-- Cabeçalho -->
-    <header class="painel-header">
-      <div>
-        <h1>👕 LavaFácil</h1>
-        <p class="painel-subtitulo">Sistema de atendimento</p>
-      </div>
-      <div class="painel-badges">
-        <span class="painel-badge badge-pendente" id="badge-pendentes">0 pendentes</span>
-        <span class="painel-badge badge-atendido" id="badge-atendidos">0 atendidos</span>
-      </div>
-    </header>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-conteudo">
+      <div class="hero-badge">✦ Self-service · Sem fila · Sem surpresa</div>
+      <h1 class="hero-titulo">
+        Sua roupa limpa e seca<br>em menos de <span class="destaque">1 hora</span>
+      </h1>
+      <p class="hero-subtitulo">
+        Máquinas modernas, ambiente climatizado e pagamento fácil.
+        Você traz, lava e leva — com o seu tempo, do seu jeito.
+      </p>
+      <a class="btn-hero"
+         href="https://wa.me/5511999999999?text=Olá!%20Vi%20o%20site%20e%20quero%20saber%20mais%20sobre%20a%20LavaFácil."
+         target="_blank">
+        💬 Falar no WhatsApp agora
+      </a>
+      <p class="hero-aviso">Atendimento rápido · Respondemos em minutos</p>
+    </div>
+  </section>
 
-    <!-- Formulário de cadastro -->
-    <section class="secao">
-      <h2 class="secao-titulo">Novo cliente</h2>
-      <div class="form-grid">
-        <input type="text" id="nome"     class="input-field" placeholder="Nome completo">
-        <input type="tel"  id="telefone" class="input-field" placeholder="WhatsApp: (11) 99999-9999">
-        <input type="text" id="obs"      class="input-field" placeholder="Observação (opcional): urgente, roupa pesada...">
-      </div>
-      <p class="input-erro" id="input-erro"></p>
-      <button class="btn-cadastrar" onclick="adicionarCliente()">+ Cadastrar cliente</button>
-    </section>
+  <!-- Benefícios -->
+  <section class="beneficios">
+    <h2 class="beneficios-titulo">Por que escolher a LavaFácil?</h2>
+    <div class="beneficios-grid">
 
-    <!-- Listas -->
-    <section class="secao" id="lista-section" style="display:none">
-
-      <!-- Ações globais -->
-      <div class="lista-header">
-        <h2 class="secao-titulo" style="margin-bottom:0">Clientes</h2>
-        <div class="lista-acoes">
-          <button class="btn-acao btn-copiar"   onclick="copiarContatos(this)">📋 Copiar</button>
-          <button class="btn-acao btn-exportar" onclick="exportarDados()">⬇ Exportar</button>
-          <button class="btn-acao btn-limpar"   onclick="limparLista()">Limpar tudo</button>
-        </div>
+      <div class="card-beneficio">
+        <div class="card-icone">⚡</div>
+        <h3>Rápido de verdade</h3>
+        <p>Lavagem e secagem completa em até 50 minutos. Você não precisa esperar o dia todo.</p>
       </div>
 
-      <!-- Pendentes -->
-      <div class="sublista">
-        <p class="sublista-titulo pendente">⏳ Pendentes</p>
-        <ul class="lista-clientes" id="lista-pendentes"></ul>
+      <div class="card-beneficio">
+        <div class="card-icone">💰</div>
+        <h3>Pague só o que usar</h3>
+        <p>Sem mensalidade, sem contrato. Você escolhe a máquina e paga apenas pela quantidade de roupa.</p>
       </div>
 
-      <!-- Atendidos -->
-      <div class="sublista" id="sublista-atendidos" style="display:none">
-        <p class="sublista-titulo atendido">✅ Atendidos</p>
-        <ul class="lista-clientes" id="lista-atendidos"></ul>
+      <div class="card-beneficio">
+        <div class="card-icone">🕐</div>
+        <h3>Aberto todos os dias</h3>
+        <p>Das 7h às 22h, incluindo feriados. Encaixe na sua rotina — não o contrário.</p>
       </div>
 
-    </section>
+      <div class="card-beneficio">
+        <div class="card-icone">📍</div>
+        <h3>Fácil de chegar</h3>
+        <p>Estacionamento gratuito para clientes. Sem estresse para parar o carro.</p>
+      </div>
 
-  </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- CTA final -->
+  <section class="cta-final">
+    <h2>Pronto para experimentar?</h2>
+    <p>Venha hoje e veja a diferença. A primeira visita não tem taxa de cadastro.</p>
+    <a class="btn-hero"
+       href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20minha%20primeira%20visita%20na%20LavaFácil."
+       target="_blank">
+      💬 Agendar pelo WhatsApp
+    </a>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <span>© 2025 LavaFácil · Todos os direitos reservados</span>
+    <a href="painel.html" class="footer-painel">Área interna</a>
+  </footer>
+
 </body>
 </html>
